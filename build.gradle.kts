@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    application
 }
 
 group = "org.example"
@@ -12,8 +13,14 @@ repositories {
 dependencies {
     testImplementation(platform("org.junit:junit-bom:5.10.0"))
     testImplementation("org.junit.jupiter:junit-jupiter")
+    implementation("com.github.miachm.sods:SODS:1.6.7")
+    implementation("org.mariadb.jdbc:mariadb-java-client:3.0.7")
 }
 
 tasks.test {
     useJUnitPlatform()
+}
+
+application{
+    mainClass = "DatabaseConn"
 }

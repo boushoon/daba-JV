@@ -1,2 +1,2 @@
-rootProject.name = "werwerwerewrw"
+rootProject.name = "db_from_ods"
 
