@@ -1,3 +1,6 @@
+import objects.AllData;
+import queries.Task;
+
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -11,13 +14,13 @@ public class DatabaseConn {
     private static final String user = System.getenv("MARIADB_USER");
     private static final String password = System.getenv("MARIADB_PASSWORD");
 
-    public static <DataResult> void main(String[] args){
-        DataResult data = null;
-        read("data.ods");
+    public static void main(String[] args){
+        AllData data = read("data.ods");
 
         try (Connection conn = createConnection()) {
             try (Statement smt = conn.createStatement()) {
-
+                Task.dropAllTables(conn);
+                Task.createTables(conn);
             }
             catch (SQLException ex) {
                 System.out.printf("Can't create statement: %s\n", ex);

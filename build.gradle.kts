@@ -21,6 +21,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-application{
+application {
     mainClass = "DatabaseConn"
 }
