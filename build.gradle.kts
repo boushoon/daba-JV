@@ -15,6 +15,7 @@ dependencies {
     testImplementation("org.junit.jupiter:junit-jupiter")
     implementation("com.github.miachm.sods:SODS:1.6.7")
     implementation("org.mariadb.jdbc:mariadb-java-client:3.0.7")
+    implementation("io.github.cdimascio:dotenv-java:3.0.0")
 }
 
 tasks.test {

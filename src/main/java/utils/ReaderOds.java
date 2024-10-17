@@ -37,7 +37,8 @@ public class ReaderOds{
             int pr3 = (int)Double.parseDouble(studentPrior.getDataRange().getCell(row, 4).getValue().toString());
 
             for(Student student: students){
-                if (student.getName().equals(name) && student.getSurname().equals(surname)){
+                //if (student.getName().equals(name) && student.getSurname().equals(surname)){
+                if(student.getId() == row){
                     student.setPr1(pr1);
                     student.setPr2(pr2);
                     student.setPr3(pr3);
@@ -94,6 +95,7 @@ public class ReaderOds{
                     reviewer.setPr3(pr3);
                     reviewer.setPr4(pr4);
                     reviewer.setPr5(pr5);
+                    break;
                 }
             }
         }
