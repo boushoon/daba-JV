@@ -42,6 +42,7 @@ public class ReaderOds{
                     student.setPr1(pr1);
                     student.setPr2(pr2);
                     student.setPr3(pr3);
+                    break;
                 }
             }
         }
